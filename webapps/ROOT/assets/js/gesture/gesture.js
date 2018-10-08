@@ -205,6 +205,9 @@ function playAnimation(fbxName) {
             antialias: true
         });
 
+        //배경 투명화
+        renderer.setClearColor(0xffffff, 0);
+
         //장치 픽셀 비율을 설정합니다.
         renderer.setPixelRatio(window.devicePixelRatio);
 
