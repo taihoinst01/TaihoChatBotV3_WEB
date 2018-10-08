@@ -106,14 +106,14 @@ function playAnimation(fbxName) {
     animate();
 
     var _width = 250;
-    var _height = 487;
+    var _height = 485;
 
     function init() {
         container = $('#animationDiv');
 
         //원근 투영 을 사용하는 카메라 .
         //camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 3, 200000);
-        camera = new THREE.PerspectiveCamera(45, 250 / 487, 3, 200000);     //케릭터 생성위치(width/height)
+        camera = new THREE.PerspectiveCamera(45, 250 / 485, 3, 200000);     //케릭터 생성위치(width/height)
         camera.position.set(100, 2000, 5500);
 
         //궤도 제어는 카메라가 표적 주위를 도는 것을 허용합니다. 
@@ -213,7 +213,7 @@ function playAnimation(fbxName) {
 
         //출력 캔버스를 장치 픽셀 비율을 고려하여 (너비, 높이)로 조정하고 (0, 0)부터 시작하여 뷰포트를 해당 크기에 맞게 설정합니다.
         //renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setSize(250, 487);     //챗팅창에 고려한 canvas 사이즈 임의 조정
+        renderer.setSize(250, 485);     //챗팅창에 고려한 canvas 사이즈 임의 조정
 
         container.append(renderer.domElement);
         //window.addEventListener('resize', onWindowResize, false); //resize 안되게 주석
