@@ -65,8 +65,7 @@ $(function () {
             "<div class='gestureHeader'>" +
                 "<span id='gestureTitle' class='gestureTitle'></span>" +
             "</div>" +
-            "<div id='animationDiv' style='width:250px;height:488px;background:#000'>" +
-            "</div>" +
+            "<div id='animationDiv'></div>" +
         "</div>").appendTo("#bot");
 
     //챗봇창 상단 생성
