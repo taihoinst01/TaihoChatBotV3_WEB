@@ -25,12 +25,12 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   visibility: hidden; }
 
 .wc-header {
-  background-color: #302f35;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  /*background-color: #302f35;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.2);*/
   box-sizing: content-box;
   color: #ffffff;
   font-weight: 500;
-  height: 30px;
+  /*height: 30px;*/
   left: 0;
   letter-spacing: 0.5px;
   padding: 8px 8px 0 8px;
@@ -44,7 +44,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   margin-bottom: 10px; }
 
 .wc-message-groups {
-  bottom: 50px;
+  bottom: 75px;
   left: 0;
   transform: translateY(0);
   overflow-x: hidden;
@@ -52,9 +52,10 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   padding: 10px;
   position: absolute;
   right: 0;
-  top: 38px;
+  top: 0;
   transition: transform 0.2s cubic-bezier(0, 0, 0.5, 1); 
-  background-color:#F2F3F7
+  /*background-color:#F2F3F7*/
+  background-color:rgba(92,92,92,0.2)
 }
   .wc-message-groups.no-header {
     top: 0; }
@@ -124,22 +125,24 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 
 .wc-console {
   /*border: 5px solid #dbdee1;*/
-  background-color:#fff;
+  background-color:#d1d1d1;
   bottom: 0;
   box-sizing: border-box;
-  height: 50px;
+  height: 60px;
   left: 0;
   position: absolute;
-  right: 0; }
+  right: 0; 
+  border-radius:20px
+}
 
 /* views */
 .wc-chatview-panel {
-  width:380px;
-  height:528px;
+  width:780px;
+  height:725px;
   overflow: hidden;
   position: absolute;
-  right: 0;
-  bottom: 0; }
+  right: 5%;
+  bottom: 5%; }
 
 /* messages */
 .wc-message-wrapper {
@@ -395,7 +398,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   right: -6px; }
 
 .wc-message-from-me .wc-message-content span{font-size:14px;color:#fff;line-height:15px;}
-.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;background:#00aad2;border-radius:5px;}
+/*.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;background:#00aad2;border-radius:5px;}*/ /* original */
+.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;background:#fff;color:#000;border-radius:15px;}
 
 /* from bot */
 .wc-message-from-bot {
@@ -430,9 +434,10 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 .wc-console label {
   cursor: pointer;
   display: inline-block;
-  height: 50px;
+  height: 60px;
   width: 60px;
-  background-color:#fff
+  background-color:#d1d1d1;
+  border-radius:20px
 }
 
 .wc-console svg {
@@ -445,7 +450,9 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   outline: none;
   padding: 0;
   resize: none;
-  width: 100%; }
+  width: 100%; 
+  background-color:#d1d1d1 /*input 색상 변경*/
+}
 
 .wc-send svg {
   height: 18px;
@@ -460,7 +467,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 
 .wc-textbox {
   bottom: 0;
-  left: 60px;
+  left: 30px;
   right: 110px; }
 
 .wc-send {

@@ -7774,11 +7774,11 @@
                     //}, o.createElement("svg", null, o.createElement("path", {
                     //    d: "M19.96 4.79m-2 0a2 2 0 0 1 4 0 2 2 0 0 1-4 0zM8.32 4.19L2.5 15.53 22.45 15.53 17.46 8.56 14.42 11.18 8.32 4.19ZM1.04 1L1.04 17 24.96 17 24.96 1 1.04 1ZM1.03 0L24.96 0C25.54 0 26 0.45 26 0.99L26 17.01C26 17.55 25.53 18 24.96 18L1.03 18C0.46 18 0 17.55 0 17.01L0 0.99C0 0.45 0.47 0 1.03 0Z"
                     //    }))),
-                        o.createElement("div", {
-                            className: "wc-menu"
-                        }, o.createElement("div", {
-                            className: "menuIcon"
-                            }, 'menu')),
+                        //o.createElement("div", {
+                        //    className: "wc-menu"
+                        //}, o.createElement("div", {
+                        //    className: "menuIcon"
+                        //    }, 'menu')),
                         o.createElement("div", {
                             className: "wc-textbox"
                         },
@@ -7852,7 +7852,7 @@
                         //}))
                         o.createElement("div", {
                             className: "sendIcon"
-                        }, 'send')
+                        })
                         ), o.createElement("label", {
                         className: s,
                         onClick: function() {
@@ -7940,7 +7940,7 @@
                 messageFailed: "couldn't send",
                 messageSending: "sending",
                 timeSent: " at %1",
-                consolePlaceholder: "Please enter your message.",
+                consolePlaceholder: "궁금한 것을 물어보세요!",
                 listeningIndicator: "Listening..."
             },
             ja: {
