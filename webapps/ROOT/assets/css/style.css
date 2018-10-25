@@ -1,5 +1,5 @@
 ﻿/* chatbot BG */
-.mainBG{background:url(../image/chatbotstyle/bg.png) no-repeat center 10%; position:absolute;top:5%; left:10%; right:10%; bottom:5%; width:90%; height:90%;border-radius:20px}
+.mainBG{background:url(../image/chatbotstyle/bg.png) no-repeat center 10%; position:absolute;top:5%; left:5%; right:5%; bottom:5%; width:90%; height:90%;border-radius:20px}
 .botBtnPosition{position:absolute;top:360px;left:25%}
 .banner{background:url(../image/chatbotStyle/btn_chatlink.png) no-repeat; width:170px;height:47px;/*position:relative;top:340px;left:23.5%;transform: translateX(-50%) translateY(-10%);*/}
 .banner:hover{background:url(../image/chatbotStyle/btn_chatlink_hover.png) no-repeat; width:170px;height:47px;cursor:pointer/*position:relative;top:340px;left:23.5%;transform: translateX(-50%) translateY(-10%);*/}
@@ -10,9 +10,9 @@
 /*.chatTitle{background: url("../image/chatbotStyle/chatbot.png") no-repeat; height:34px;width:239px; display: inline-block;top: 12px; position: absolute; }
 .chatTitleText{font-size:30px;color:#000;top: 10px;left:25%;right:25%; position: absolute;text-align:center}*/
 .topIcon01{background: url("../image/chatbotStyle/btn_down.png") no-repeat;  width:14px;height:13px;display: inline-block;top: 14px; right: 58px;position: absolute} 
-.topIcon02{background: url("../image/chatbotStyle/icon01.png") no-repeat;  width:33px;height:33px;display: inline-block;top: 25px; right: 80px;position: absolute;}
-.topIcon02-1{background: url("../image/chatbotStyle/icon01.png") no-repeat;  width:33px;height:33px;display: inline-block;top: 25px; right: 80px;position: absolute;}
-.topIcon03{background: url("../image/chatbotStyle/icon02.png") no-repeat;  width:33px;height:33px;display: inline-block;top: 25px; right: 30px;position: absolute;}
+.topIcon02{background: url("../image/chatbotStyle/icon03.png") no-repeat;  width:33px;height:33px;display: inline-block;top: 25px; right: 12%;position: absolute;}
+.topIcon02-1{background: url("../image/chatbotStyle/icon01.png") no-repeat;  width:33px;height:33px;display: inline-block;top: 25px; right: 12%;position: absolute;}
+.topIcon03{background: url("../image/chatbotStyle/icon02.png") no-repeat;  width:33px;height:33px;display: inline-block;top: 25px; right: 8%;position: absolute;}
 .topIcon{width:12px; height:12px;cursor:pointer;margin:7px 3px 0 9px;float:right}
 .topGestureArea{float:right;background:gray;width:65px;height:22px;cursor:pointer}
 .topGestureIcon{color:#302f35 !important;background:#fff;width:30px;height:22px;display:inline-block;float:right}

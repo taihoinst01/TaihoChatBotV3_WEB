@@ -118,23 +118,25 @@ $(function () {
         $('#animationDiv').hide();
         $('.btnMin').css({ 'display': 'none' });
         $('.btnLayer').removeClass('btnLayerFull').addClass('btnLayerMid');
-        $('.btnLayer > button').removeClass('topIcon02').addClass('topIcon02-1');
+        $('.btnLayer > span').removeClass('topIcon02').addClass('topIcon02-1');
     });
-    $(document).on('click', '.wc-header [class*=btnLayer]', function () {
+    $(document).on('click', '.mainBG [class*=btnLayer]', function () {
         if ($(this).hasClass('btnLayerMid')) {
-            $('.wc-chatview-panel').animate({ "height": "528px" }, "fast");
-            $('.popupArea').animate({ 'bottom': '174px' }, "fast");
+            //$('.wc-chatview-panel').animate({ "height": "528px" }, "fast");
+            $('.mainBG').animate({ "top": 5+"%", "left": 5+"%", "width": 90 + "%", "height": 90 + "%", "border-radius": 15+"px" }, "fast");
+            //$('.popupArea').animate({ 'bottom': '174px' }, "fast");
             $('.gestureArea').animate({ "height": "528px" }, "fast");
             $('.wc-console, wc-message-pane').show();
             $('#animationDiv').show();
             $('.btnLayer').removeClass('btnLayerMid').addClass('btnLayerFull');
-            $('.btnLayer > button').css({ 'display': 'inline-block' }).removeClass('topIcon02-1').addClass('topIcon02');
+            $('.btnLayer > span').css({ 'display': 'inline-block' }).removeClass('topIcon02-1').addClass('topIcon02');
             $('.btnMin').css({ 'right': '58px', 'display': 'inline-block' });
         } else {
-            $('.wc-chatview-panel').animate({ "height": ($(document).height()) + 'px' }, "fast");
-            $('.popupArea').animate({ 'bottom': ($(window).height() - 352) + 'px' }, "fast");
+            //$('.wc-chatview-panel').animate({ "height": ($(document).height()) + 'px' }, "fast");
+            //$('.popupArea').animate({ 'bottom': ($(window).height() - 352) + 'px' }, "fast");
+            $('.mainBG').animate({ "top": 0, "left":0, "width":100+"%", "height":100+"%", "border-radius":0+"px" }, "fast");
             $('.btnLayer').removeClass('btnLayerFull').addClass('btnLayerMid');
-            $('.btnLayer > button').css({ 'display': 'inline-block' }).removeClass('topIcon02').addClass('topIcon02-1');
+            $('.btnLayer > span').css({ 'display': 'inline-block' }).removeClass('topIcon02').addClass('topIcon02-1');
         }
     });
 
