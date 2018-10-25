@@ -84,9 +84,9 @@ $(function () {
         "<span class='topIcon btnClose'><span class='topIcon03'></span></span>" +
         "<span class='topIcon btnLayer btnLayerFull'><span class='topIcon02'></span></span>"
         //"<span class='topIcon btnMin'><button class='topIcon01'></button></span>" +
-        //"<span class='topGestureArea'>" +
-        //"<div class='topGestureOff'>OFF</div><div class='topGestureOn'>ON</div> <div class='topGestureIcon'></div>  " +
-        //"</span>"
+        +"<span class='topGestureArea'>" +
+        "<div class='topGestureOff'>OFF</div><div class='topGestureOn'>ON</div> <div class='topGestureIcon'></div>  " +
+        "</span>"
     ).appendTo(".mainBG");
 
     //챗봇 메뉴창 생성
