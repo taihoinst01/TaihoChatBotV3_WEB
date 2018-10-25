@@ -14,7 +14,7 @@
 		$('.bot-wrap').remove();
 		$(".banner").remove();
 	}
-
+    playAnimation('ChatBot_AniAll01');
 });
 
 function isMobile() {

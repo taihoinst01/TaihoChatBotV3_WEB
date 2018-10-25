@@ -125,7 +125,7 @@ $(function () {
             //$('.wc-chatview-panel').animate({ "height": "528px" }, "fast");
             $('.mainBG').animate({ "top": 5+"%", "left": 5+"%", "width": 90 + "%", "height": 90 + "%", "border-radius": 15+"px" }, "fast");
             //$('.popupArea').animate({ 'bottom': '174px' }, "fast");
-            $('.gestureArea').animate({ "height": "528px" }, "fast");
+            //$('.gestureArea').animate({ "height": "528px" }, "fast");
             $('.wc-console, wc-message-pane').show();
             $('#animationDiv').show();
             $('.btnLayer').removeClass('btnLayerMid').addClass('btnLayerFull');
