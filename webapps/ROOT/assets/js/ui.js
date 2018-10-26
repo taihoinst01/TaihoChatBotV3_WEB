@@ -123,20 +123,42 @@ $(function () {
     $(document).on('click', '.mainBG [class*=btnLayer]', function () {
         if ($(this).hasClass('btnLayerMid')) {
             //$('.wc-chatview-panel').animate({ "height": "528px" }, "fast");
-            $('.mainBG').animate({ "top": 5+"%", "left": 5+"%", "width": 90 + "%", "height": 90 + "%", "border-radius": 15+"px" }, "fast");
             //$('.popupArea').animate({ 'bottom': '174px' }, "fast");
             //$('.gestureArea').animate({ "height": "528px" }, "fast");
+
+            //창 늘릴때 바꾸는 부분
+            $('.mainBG').animate({ "width": 90 + "%", "height": 90 + "%" }, "fast");
+            $('.m_chatTitle > span').removeClass('m_titleIcon').addClass('titleIcon');
+            $('.m_chatTitle').removeClass('m_chatTitle').addClass('chatTitle');
+            $('.m_topIcon03').removeClass('m_topIcon03').addClass('topIcon03');
+            $('.m_gestureArea').removeClass('m_gestureArea').addClass('gestureArea');
+            $('.m_wc-chatview-panel').removeClass('m_wc-chatview-panel').addClass('wc-chatview-panel');
+            $('.wc-console').animate({ "height": 60 + "px", "left": 0 + "px", "right": 0 + "px", "bottom": 0 + "px" }, "fast");
+            $('.wc-console label').animate({ "width": 60 + "px", "height": 60 + "px" }, "fast");
+            $('.m_sendIcon').removeClass('m_sendIcon').addClass('sendIcon');
+
             $('.wc-console, wc-message-pane').show();
             $('#animationDiv').show();
             $('.btnLayer').removeClass('btnLayerMid').addClass('btnLayerFull');
-            $('.btnLayer > span').css({ 'display': 'inline-block' }).removeClass('topIcon02-1').addClass('topIcon02');
-            $('.btnMin').css({ 'right': '58px', 'display': 'inline-block' });
+            $('.btnLayer > span').css({ 'display': 'inline-block' }).removeClass('m_topIcon02').addClass('topIcon02');
+            //$('.btnMin').css({ 'right': '58px', 'display': 'inline-block' });
         } else {
             //$('.wc-chatview-panel').animate({ "height": ($(document).height()) + 'px' }, "fast");
             //$('.popupArea').animate({ 'bottom': ($(window).height() - 352) + 'px' }, "fast");
-            $('.mainBG').animate({ "top": 0, "left":0, "width":100+"%", "height":100+"%", "border-radius":0+"px" }, "fast");
+
+            //창 줄일때 바꾸는 부분
+            $('.mainBG').animate({ "width": 420 + "px", "height": 590 + "px" }, "fast");
+            $('.chatTitle > span').removeClass('titleIcon').addClass('m_titleIcon');
+            $('.chatTitle').removeClass('chatTitle').addClass('m_chatTitle');
+            $('.topIcon03').removeClass('topIcon03').addClass('m_topIcon03');
+            $('.gestureArea').removeClass('gestureArea').addClass('m_gestureArea');
+            $('.wc-chatview-panel').removeClass('wc-chatview-panel').addClass('m_wc-chatview-panel');
+            $('.wc-console').animate({ "height": 37 + "px", "left":5+"px","right":5+"px","bottom":10+"px" }, "fast");
+            $('.wc-console label').animate({ "width":42+"px","height": 32 + "px"}, "fast");
+            $('.sendIcon').removeClass('sendIcon').addClass('m_sendIcon');
+
             $('.btnLayer').removeClass('btnLayerFull').addClass('btnLayerMid');
-            $('.btnLayer > span').css({ 'display': 'inline-block' }).removeClass('topIcon02').addClass('topIcon02-1');
+            $('.btnLayer > span').css({ 'display': 'inline-block' }).removeClass('topIcon02').addClass('m_topIcon02');
         }
     });
 
@@ -154,13 +176,13 @@ $(function () {
     //챗봇 제스처 동작
     var startGesture = 0;
     $('.topGestureArea').click(function () {
-        if ($('.topGestureIcon').css('float') == 'left') {
+        if ($('.topGestureIcon').css('float') == 'right') {
             //Gesture off
-            $('.topGestureIcon').css({ 'float': 'right' });
+            $('.topGestureIcon').css({ 'float': 'left' });
             $('.gesture-wrapper').hide().animate({ "right": "-380px", "opacity": "0" }, "slow").fadeOut("slow");
         } else {
             //Gesture on
-            $('.topGestureIcon').css({ 'float': 'left' });
+            $('.topGestureIcon').css({ 'float': 'right' });
             if (startGesture == 0) {
                 playAnimation('ChatBot_AniAll01');
                 startGesture = 1;
