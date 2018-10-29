@@ -214,19 +214,28 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   .wc-card .non-adaptive-content {
     margin: 8px 8px 0 8px; }
   .wc-card button {
-    background-color: transparent;
-    color: #3a96dd;
+    /*background-color: transparent;
+    color: #3a96dd;*/
+    background-color: #fff;
+    color: #000;
+    border-radius:10px;
     min-height: 32px;
     width: 100%;
     padding: 0 16px; }
   .wc-card button:hover {
-    background-color: transparent;
+    background-color: #fff;
+    color: #000;
+    border-radius:10px
+    /*background-color: transparent;
     border-color: #3a96dd;
-    color: #3a96dd; }
+    color: #3a96dd;*/ }
   .wc-card button:active {
-    background-color: #3a96dd;
+    background-color: #d1d1d1;
+    color: #000;
+    border-radius:10px
+    /*background-color: #3a96dd;
     border-color: #3a96dd;
-    color: #ffffff; }
+    color: #ffffff;*/ }
   .wc-card.receipt table {
     border-collapse: collapse;
     width: 100%; }

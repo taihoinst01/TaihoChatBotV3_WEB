@@ -184,7 +184,7 @@ $(function () {
         if ($('.topGestureIcon').css('float') == 'left') {
             //Gesture off
             $('.topGestureIcon').css({ 'float': 'right' });
-            $('.gesture-wrapper').hide().animate({ "right": "-380px", "opacity": "0" }, "slow").fadeOut("slow");
+            $('.gesture-wrapper').hide().animate({ "height": "0", "opacity": "0" }, "slow").fadeOut("slow");
             $('.wc-chatview-panel').show().animate({ "right": "27%" }, "slow").fadeIn("slow");
         } else {
             //Gesture on
@@ -194,7 +194,7 @@ $(function () {
                 $('#animationDiv > canvas').css({ 'border-radius': 15 + 'px' });
                 startGesture = 1;
             }
-            $('.gesture-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "slow").fadeIn("slow");
+            $('.gesture-wrapper').show().animate({ "height": "80%", "opacity": "1" }, "slow").fadeIn("slow");
             $('.wc-chatview-panel').show().animate({ "right": "5%"}, "slow").fadeIn("slow");
         }
     });
