@@ -62,9 +62,9 @@ $(function () {
     //제스처 케릭터 영역 생성
     $("#bot > div").add(
         "<div class='gesture-wrapper gestureArea'>" +
-            "<div class='gestureHeader'>" +
-                "<span id='gestureTitle' class='gestureTitle'></span>" +
-            "</div>" +
+            //"<div class='gestureHeader'>" +
+            //    "<span id='gestureTitle' class='gestureTitle'></span>" +
+            //"</div>" +
             "<div id='animationDiv'></div>" +
         "</div>").appendTo("#bot");
 
@@ -136,6 +136,11 @@ $(function () {
             $('.wc-console').animate({ "height": 60 + "px", "left": 0 + "px", "right": 0 + "px", "bottom": 0 + "px" }, "fast");
             $('.wc-console label').animate({ "width": 60 + "px", "height": 60 + "px" }, "fast");
             $('.m_sendIcon').removeClass('m_sendIcon').addClass('sendIcon');
+            if ($('.topGestureIcon').css('float') == 'left') {
+                $('.wc-chatview-panel').show().animate({ "right": "5%" }, "slow").fadeIn("slow");
+            } else {
+                $('.wc-chatview-panel').show().animate({ "right": "27%" }, "slow").fadeIn("slow");
+            }
 
             $('.wc-console, wc-message-pane').show();
             $('#animationDiv').show();
@@ -176,18 +181,21 @@ $(function () {
     //챗봇 제스처 동작
     var startGesture = 0;
     $('.topGestureArea').click(function () {
-        if ($('.topGestureIcon').css('float') == 'right') {
+        if ($('.topGestureIcon').css('float') == 'left') {
             //Gesture off
-            $('.topGestureIcon').css({ 'float': 'left' });
+            $('.topGestureIcon').css({ 'float': 'right' });
             $('.gesture-wrapper').hide().animate({ "right": "-380px", "opacity": "0" }, "slow").fadeOut("slow");
+            $('.wc-chatview-panel').show().animate({ "right": "27%" }, "slow").fadeIn("slow");
         } else {
             //Gesture on
-            $('.topGestureIcon').css({ 'float': 'right' });
+            $('.topGestureIcon').css({ 'float': 'left' });
             if (startGesture == 0) {
                 playAnimation('ChatBot_AniAll01');
+                $('#animationDiv > canvas').css({ 'border-radius': 15 + 'px' });
                 startGesture = 1;
             }
             $('.gesture-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "slow").fadeIn("slow");
+            $('.wc-chatview-panel').show().animate({ "right": "5%"}, "slow").fadeIn("slow");
         }
     });
     //닫기 버튼
