@@ -114,7 +114,7 @@ function playAnimation(fbxName) {
         //원근 투영 을 사용하는 카메라 .
         //camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 3, 200000);
         camera = new THREE.PerspectiveCamera(45, 338 / 588, 1, 200000);     //케릭터 생성위치(width/height)
-        camera.position.set(45, 1000, 50);
+        camera.position.set(100, 10000, 15000);
 
         //궤도 제어는 카메라가 표적 주위를 도는 것을 허용합니다. 
         //controls = new THREE.OrbitControls(camera);
