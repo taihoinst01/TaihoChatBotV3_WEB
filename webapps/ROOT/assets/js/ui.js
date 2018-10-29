@@ -213,7 +213,7 @@ $(function () {
             //alert($('#conversationId').val());
             //var directLineUrl = "https://northamerica.directline.botframework.com";
             var directLineUrl = "https://directline.botframework.com";
-            var secretKey = "FhoZRDuRE_8.cwA.VUA.XDqPTho3xJJJTwF14KTPZeyo0QZ5plfns2nMUS0h99I";	//USWEST
+            var secretKey = "4CfO6oobRO4.cwA.cRQ.5Ee7OFYL20UBxyyh9mEnNIzHvEU0OYads6M5C8Pz-6g";	//USWEST
 
             var info = JSON.stringify({
                 type: 'message',
@@ -240,7 +240,7 @@ $(function () {
             //alert("에러: " + error.message);
             //var directLineUrl = "https://northamerica.directline.botframework.com";
             var directLineUrl = "https://directline.botframework.com";
-            var secretKey = "FhoZRDuRE_8.cwA.VUA.XDqPTho3xJJJTwF14KTPZeyo0QZ5plfns2nMUS0h99I";	//USWEST
+            var secretKey = "4CfO6oobRO4.cwA.cRQ.5Ee7OFYL20UBxyyh9mEnNIzHvEU0OYads6M5C8Pz-6g";	//USWEST
             var info = JSON.stringify({
                 type: 'message',
                 text: '직접 검색',
