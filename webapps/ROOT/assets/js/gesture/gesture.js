@@ -113,8 +113,9 @@ function playAnimation(fbxName) {
 
         //원근 투영 을 사용하는 카메라 .
         //camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 3, 200000);
-        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 3, 200000);     //케릭터 생성위치(width/height)
-        camera.position.set(100, 2000, 5500);
+        //camera.position.set(100, 2000, 5500);
+        camera = new THREE.PerspectiveCamera(45, 338 / 647, 3, 200000);     //케릭터 생성위치(width/height)
+        camera.position.set(100, 2000, 12500);
 
         //궤도 제어는 카메라가 표적 주위를 도는 것을 허용합니다. 
         //controls = new THREE.OrbitControls(camera);
@@ -123,15 +124,15 @@ function playAnimation(fbxName) {
 
         //장면을 사용하면 three.js에서 렌더링 할 내용의 위치를 ​​설정할 수 있습니다. 이것은 물건, 조명 및 카메라를 배치하는 곳입니다.
         scene = new THREE.Scene();
-        //scene.background = new THREE.Color(0xa0a0a0);
-        scene.background = new THREE.Color(0xffffff);
+        scene.background = new THREE.Color(0xa0a0a0);
+        //scene.background = new THREE.Color(0xffffff);
 
         //하늘색에서 바탕색으로 색상이 희미 해져 장면 바로 위에 배치 된 광원입니다. 이 빛은 그림자를 드리 우는 데 사용할 수 없습니다.
-        light = new THREE.HemisphereLight(0xffffff);
+        light = new THREE.HemisphereLight(0xa0a0a0);
         scene.add(light);
 
         //특정 방향으로 방출되는 빛. 이 빛은 무한히 멀리 떨어져있는 것처럼 행동 할 것이고 그 광선은 모두 평행합니다. 이것에 대한 일반적인 사용 사례는 일광을 시뮬레이션하는 것입니다.  
-        light = new THREE.AmbientLight(0xffffff);
+        light = new THREE.AmbientLight(0xa0a0a0);
         scene.add(light);
 
         // model
@@ -213,7 +214,7 @@ function playAnimation(fbxName) {
         renderer.setSize(338, 647);     //챗팅창에 고려한 canvas 사이즈 임의 조정
         
         container.append(renderer.domElement);
-        window.addEventListener('resize', onWindowResize, false); //resize 안되게 주석
+        //window.addEventListener('resize', onWindowResize, false); //resize 안되게 주석
 
         // stats
         stats = new Stats();
