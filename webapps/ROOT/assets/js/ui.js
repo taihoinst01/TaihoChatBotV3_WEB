@@ -82,10 +82,15 @@ $(function () {
         "<span class='chatTitle'><span class='titleIcon'></span></span>" +
         //"<span class='chatTitleText'>TIIZ <strong>ChatBot</strong></span>" +
         "<span class='topIcon btnClose'><span class='topIcon03'></span></span>" +
-        "<span class='topIcon btnLayer btnLayerFull'><span class='topIcon02'></span></span>"
+        "<span class='topIcon btnLayer btnLayerFull'><span class='topIcon02'></span></span>" +
         //"<span class='topIcon btnMin'><button class='topIcon01'></button></span>" +
-        +"<span class='topGestureArea'>" +
-        "<div class='topGestureOff'>OFF</div><div class='topGestureOn'>ON</div> <div class='topGestureIcon'></div>  " +
+        //+"<span class='topGestureArea'>" +
+        //    "<div class='topGestureOff'>OFF</div>" +
+        //    "<div class='topGestureOn'>ON</div>" +
+        //    "<div class='topGestureIcon'></div>" +
+        //"</span>" +
+        "<span class='topGestureArea2'>" +
+            "<span class='topGestureOffImg' alt='off'></span>" +
         "</span>"
     ).appendTo(".mainBG");
 
@@ -136,12 +141,15 @@ $(function () {
             $('.wc-console').animate({ "height": 60 + "px", "left": 0 + "px", "right": 0 + "px", "bottom": 0 + "px" }, "fast");
             $('.wc-console label').animate({ "width": 60 + "px", "height": 60 + "px" }, "fast");
             $('.m_sendIcon').removeClass('m_sendIcon').addClass('sendIcon');
-            if ($('.topGestureIcon').css('float') == 'left') {
+            $('#animationDiv > canvas').css({ "height": 80 + "%" });
+            if ($('.m_topGestureOnImg').attr('alt') == 'on') {
                 $('.wc-chatview-panel').show().animate({ "right": "5%" }, "slow").fadeIn("slow");
+                $('.m_topGestureOnImg').removeClass('m_topGestureOnImg').addClass('topGestureOnImg');
             } else {
                 $('.wc-chatview-panel').show().animate({ "right": "27%" }, "slow").fadeIn("slow");
+                $('.m_topGestureOffImg').removeClass('m_topGestureOffImg').addClass('topGestureOffImg');
             }
-            $('#animationDiv > canvas').css({ "height": 80 + "%" });
+            $('.m_ttsMicBlack').removeClass('m_ttsMicBlack').addClass('ttsMicBlack');
 
             $('.wc-console, wc-message-pane').show();
             $('#animationDiv').show();
@@ -163,6 +171,14 @@ $(function () {
             $('.wc-console label').animate({ "width":42+"px","height": 32 + "px"}, "fast");
             $('.sendIcon').removeClass('sendIcon').addClass('m_sendIcon');
             $('#animationDiv > canvas').css({ "height": 592 + "px" });
+            if ($('.topGestureOnImg').attr('alt') == 'on') {
+                $('.wc-chatview-panel').show().animate({ "right": "5%" }, "slow").fadeIn("slow");
+                $('.topGestureOnImg').removeClass('topGestureOnImg').addClass('m_topGestureOnImg');
+            } else {
+                $('.wc-chatview-panel').show().animate({ "right": "27%" }, "slow").fadeIn("slow");
+                $('.topGestureOffImg').removeClass('topGestureOffImg').addClass('m_topGestureOffImg');
+            }
+            $('.ttsMicBlack').removeClass('ttsMicBlack').addClass('m_ttsMicBlack');
 
             $('.btnLayer').removeClass('btnLayerFull').addClass('btnLayerMid');
             $('.btnLayer > span').css({ 'display': 'inline-block' }).removeClass('topIcon02').addClass('m_topIcon02');
@@ -182,14 +198,38 @@ $(function () {
     
     //챗봇 제스처 동작
     var startGesture = 0;
-    $('.topGestureArea').click(function () {
-        if ($('.topGestureIcon').css('float') == 'left') {
+    //$('.topGestureArea').click(function () {
+    //    if ($('.topGestureIcon').css('float') == 'left') {
+    //        //Gesture off
+    //        $('.topGestureIcon').css({ 'float': 'right' });
+    //        $('.gesture-wrapper').hide().animate({ "height": "0", "opacity": "0" }, "slow").fadeOut("slow");
+    //        $('.wc-chatview-panel').show().animate({ "right": "27%" }, "slow").fadeIn("slow");
+    //    } else {
+    //        //Gesture on
+    //        $('.topGestureIcon').css({ 'float': 'left' });
+    //        if (startGesture == 0) {
+    //            playAnimation('ChatBot_AniAll01');
+    //            $('#animationDiv > canvas').css({ 'border-radius': 15 + 'px' });
+    //            startGesture = 1;
+    //        }
+    //        $('.gesture-wrapper').show().animate({ "height": "80%", "opacity": "1" }, "slow").fadeIn("slow");
+    //        $('.wc-chatview-panel').show().animate({ "right": "5%"}, "slow").fadeIn("slow");
+    //    }
+    //});
+
+    $('.topGestureArea2').click(function () {
+        // 사이즈 클때
+        if ($('.topGestureOnImg').attr('alt') == 'on') {
             //Gesture off
-            $('.topGestureIcon').css({ 'float': 'right' });
+            $('.topGestureOnImg').attr('alt', 'off');
+            $('.topGestureOnImg').removeClass('topGestureOnImg').addClass('topGestureOffImg');
             $('.gesture-wrapper').hide().animate({ "height": "0", "opacity": "0" }, "slow").fadeOut("slow");
+
             $('.wc-chatview-panel').show().animate({ "right": "27%" }, "slow").fadeIn("slow");
-        } else {
+        } else if ($('.topGestureOffImg').attr('alt') == 'off') {
             //Gesture on
+            $('.topGestureOffImg').attr('alt', 'on');
+            $('.topGestureOffImg').removeClass('topGestureOffImg').addClass('topGestureOnImg');
             $('.topGestureIcon').css({ 'float': 'left' });
             if (startGesture == 0) {
                 playAnimation('ChatBot_AniAll01');
@@ -197,9 +237,30 @@ $(function () {
                 startGesture = 1;
             }
             $('.gesture-wrapper').show().animate({ "height": "80%", "opacity": "1" }, "slow").fadeIn("slow");
-            $('.wc-chatview-panel').show().animate({ "right": "5%"}, "slow").fadeIn("slow");
+            $('.wc-chatview-panel').show().animate({ "right": "5%" }, "slow").fadeIn("slow");
+        // 사이즈 작을때
+        } else if ($('.m_topGestureOnImg').attr('alt') == 'on') {
+            //Gesture off
+            $('.m_topGestureOnImg').attr('alt', 'off');
+            $('.gesture-wrapper').hide().animate({ "height": "0", "opacity": "0" }, "slow").fadeOut("slow");
+
+            $('.wc-chatview-panel').show().animate({ "right": "27%" }, "slow").fadeIn("slow");
+            $('.m_topGestureOnImg').removeClass('m_topGestureOnImg').addClass('m_topGestureOffImg');
+        } else if ($('.m_topGestureOffImg').attr('alt') == 'off') {
+            //Gesture on
+            $('.m_topGestureOffImg').attr('alt', 'on');
+            $('.m_topGestureOffImg').removeClass('m_topGestureOffImg').addClass('m_topGestureOnImg');
+            $('.topGestureIcon').css({ 'float': 'left' });
+            //if (startGesture == 0) {
+            //    playAnimation('ChatBot_AniAll01');
+            //    $('#animationDiv > canvas').css({ 'border-radius': 15 + 'px' });
+            //    startGesture = 1;
+            //}
+            $('.gesture-wrapper').show().animate({ "height": "80%", "opacity": "1" }, "slow").fadeIn("slow");
+            $('.wc-chatview-panel').show().animate({ "right": "5%" }, "slow").fadeIn("slow");
         }
     });
+
     //닫기 버튼
     $('.btnTopClose').click(function () {
         $("#video").attr('src', '');
@@ -282,14 +343,14 @@ $(function () {
             var imgCnt = $(this).parent().parent().parent().children().eq(0).children().eq(3).attr('alt');
             $('#imgTag').attr('src', imgUrl);
             $('#imgTitle').text(imgPopTitle);
-            $('.img-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
+            $('.img-wrapper').show().animate({ "right": "421px", "opacity": "1" }, "fast");
         } else if (popType == "play") { // PLAY
             $('.img-wrapper, .map-wrapper, .reel-wrapper').fadeOut();
             var movPopTitle = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
             var movPopUrl = $(this).parent().parent().parent().children().eq(0).children().eq(2).attr('alt');
             $('#movTitle').text(movPopTitle);
             $('#video').attr('src', movPopUrl);
-            $('.mov-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
+            $('.mov-wrapper').show().animate({ "right": "421px", "opacity": "1" }, "fast");
         } else if (popType == "map") {  // MAP
             $('.mov-wrapper, .img-wrapper, .reel-wrapper').fadeOut();
             $('#mapArea > div').remove();
@@ -311,7 +372,7 @@ $(function () {
                 position: new naver.maps.LatLng(longitude, latitude),
                 map: map
             });
-            $('.map-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
+            $('.map-wrapper').show().animate({ "right": "421px", "opacity": "1" }, "fast");
         } else if (popType == "reel") { // REEL
             $('.img-wrapper, .map-wrapper, .mov-wrapper').fadeOut();
 
@@ -327,7 +388,7 @@ $(function () {
                 });
             }
 
-            $('.reel-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
+            $('.reel-wrapper').show().animate({ "right": "421px", "opacity": "1" }, "fast");
         }
     });
 
