@@ -152,12 +152,15 @@ $(function () {
             }
             $('.m_ttsMicBlack').removeClass('m_ttsMicBlack').addClass('ttsMicBlack');
             $('.m_ttsMicRed').removeClass('m_ttsMicRed').addClass('ttsMicRed');
+            $('.popupArea').css({ 'bottom': 472 + 'px' });
 
             $('.wc-console, wc-message-pane').show();
             $('#animationDiv').show();
             $('.btnLayer').removeClass('btnLayerMid').addClass('btnLayerFull');
             $('.btnLayer > span').css({ 'display': 'inline-block' }).removeClass('m_topIcon02').addClass('topIcon02');
             //$('.btnMin').css({ 'right': '58px', 'display': 'inline-block' });
+
+            $('.btnTopClose').click();
         } else {
             //$('.wc-chatview-panel').animate({ "height": ($(document).height()) + 'px' }, "fast");
             //$('.popupArea').animate({ 'bottom': ($(window).height() - 352) + 'px' }, "fast");
@@ -183,6 +186,7 @@ $(function () {
             }
             $('.ttsMicBlack').removeClass('ttsMicBlack').addClass('m_ttsMicBlack');
             $('.ttsMicRed').removeClass('ttsMicRed').addClass('m_ttsMicRed');
+            $('.popupArea').animate({ 'bottom': 236 + 'px', 'right':421+'px' }, "fast");
 
             $('.btnLayer').removeClass('btnLayerFull').addClass('btnLayerMid');
             $('.btnLayer > span').css({ 'display': 'inline-block' }).removeClass('topIcon02').addClass('m_topIcon02');
@@ -246,7 +250,7 @@ $(function () {
         }
 
         //Gesture 클릭시 팝업을 닫는다.
-        $('.mov-wrapper, .img-wrapper, .map-wrapper, .reel-wrapper').hide().animate({ "right": "-380px", "opacity": "0", "display": "none" }, "fast").fadeOut("fast");
+        $('.btnTopClose').click();
     });
 
     //닫기 버튼
@@ -354,7 +358,16 @@ $(function () {
             var movPopUrl = $(this).parent().parent().parent().children().eq(0).children().eq(2).attr('alt');
             $('#movTitle').text(movPopTitle);
             $('#video').attr('src', movPopUrl);
-            $('.mov-wrapper').show().animate({ "right": "421px", "opacity": "1" }, "fast");
+
+            if ($('.topGestureOnImg').attr('alt') == 'on') {
+                $('.mov-wrapper').show().animate({ "right": "780px", "opacity": "1" }, "fast");
+                $('.wc-chatview-panel').show().animate({ "right": 0 }, "fast");
+            } else if ($('.topGestureOffImg').attr('alt') == 'off') {
+                $('.mov-wrapper').show().animate({ "right": "930px", "opacity": "1" }, "fast");
+                $('.wc-chatview-panel').show().animate({ "right": 150 + 'px' }, "fast");
+            } else {
+                $('.mov-wrapper').show().animate({ "right": "421px", "opacity": "1" }, "fast");
+            }
         } else if (popType == "map") {  // MAP
             $('.mov-wrapper, .img-wrapper, .reel-wrapper').fadeOut();
             $('#mapArea > div').remove();

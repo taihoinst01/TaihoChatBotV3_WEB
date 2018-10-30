@@ -142,7 +142,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   overflow: hidden;
   position: absolute;
   right: 27%;
-  bottom: 5%; }
+  bottom: 5%;
+}
 
 /* messages */
 .wc-message-wrapper {
@@ -369,9 +370,11 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   .wc-carousel button.scroll:hover {
     background-color: #808c95; }
   .wc-carousel button.scroll svg {
-    fill: #ffffff; }
+    /*fill: #ffffff;*/
+    fill: #000000;
+  }
   .wc-carousel button.scroll.previous {
-    left: 0 }
+    left: 0px; }
   .wc-carousel button.scroll.next {
     right: 24px; }
   .wc-carousel .wc-hscroll > ul {

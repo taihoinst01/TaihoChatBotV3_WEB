@@ -44,13 +44,13 @@
 .ttsMicRed{background: url("../image/chatbotStyle/micRed_50.png");width:50px;height:50px;position:absolute;top:5px;right:60px;cursor:pointer}
 
 /* media Icon */
-.playImg {background: url("../image/chatbotStyle/ico_play_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:25%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
-.imgImg {background: url("../image/chatbotStyle/d_icn_img.png");width:34px;height:34px;position:absolute;top:35%;margin-left:40%;cursor:pointer}
+.playImg {background: url("../image/chatbotStyle/ico_play_50.png") no-repeat;width:50px;height:50px;position:relative;right:58%;margin-top:55px;padding:25px;cursor:pointer}
+.imgImg {background: url("../image/chatbotStyle/d_icn_img.png") no-repeat;width:34px;height:34px;position:relative;padding:17px; right:15%; margin-top:110px; cursor:pointer}
 .mapImg {background: url("../image/chatbotStyle/ico_map_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:25%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
 .reelImg {background: url("../image/chatbotStyle/ico_reel_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:25%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
 
-/* popup Area */
-.popupArea{opacity:0;position: absolute;right:0;bottom: 236px;width:570px;height:354px;display:none;background-color:#fff;z-index:1500}
+/* popup Area 236*/
+.popupArea{opacity:0;position: absolute;right:0;bottom: 472px;width:570px;height:354px;display:none;background-color:#fff;z-index:1500}
 .popupTitle{font-size:20px;color:#FFF;position:absolute;top:5px;left:15px}
 .popHeader{background-color:#4b4f57; background-size: 100%;height: 38px;width: 571px; position: relative;border-top-left-radius:15px;border-top-right-radius:15px}
 .popBody{background-color: #fbfbfb;height:318px; position: relative;}
@@ -60,7 +60,7 @@
 .popTxt span{background-color: #bcbcbc; color: #FFF; border-radius: 5px; padding: 4px 10px 5px; font-size: 12px}
 
 /* gesture Area */
-.gestureArea {opacity: 0;position: absolute;left: 5%;bottom: 5%;width: 340px;height: 80%; /*display:none;*/background-color: #fff;z-index: 1000;transform: translateX(50%) translateY(0%);border-radius:15px}
+.gestureArea {opacity: 0;position: absolute;left: 5%;bottom: 5%;width: 340px;height: 80%; /*display:none;*/background-color: #fff;transform: translateX(50%) translateY(0%);border-radius:15px}
 .gestureTitle{font-size:20px;color:#FFF;position:absolute;top:5px;left:15px}
 /*.gestureHeader{background-color:#4b4f57; background-size: 100%;height: 38px;width: 250px; position: relative;}*/
 .gestureBody{background-color: #fbfbfb;height:490px; position: relative;}
@@ -70,7 +70,7 @@
 .m_titleIcon{background: url("../image/chatbotStyle/m_chatbot.png") no-repeat; height:15px;width:109px; display: inline-block;left:157px;top:12px; position:absolute}
 .m_topIcon02{background: url("../image/chatbotStyle/m_icon01.png") no-repeat;  width:15px;height:15px;display: inline-block;right: 50px;top:12px;position: absolute;cursor:pointer}
 .m_topIcon03{background: url("../image/chatbotStyle/m_icon02.png") no-repeat;  width:15px;height:15px;display: inline-block;right: 25px;top:12px;position: absolute;cursor:pointer}
-.m_gestureArea{opacity:1;position:absolute;left:-83%;width:340px;height:590px;/*display:none;*/background-color:#fff;z-index:1000;border-radius:15px}
+.m_gestureArea{opacity:1;position:absolute;left:-83%;width:340px;height:590px;/*display:none;*/background-color:#fff;border-radius:15px}
 .m_wc-chatview-panel {width: 419px;height: 552px;overflow: hidden;position: absolute;top:38px;left:0;bottom: 5%;}
 .m_sendIcon{background: url("../image/chatbotStyle/m_btn.png") no-repeat; width:32px;height:32px;margin:2px} /*이미지용*/
 .m_topGestureOnImg{background: url("../image/chatbotStyle/m_character01.png") no-repeat; width:54px;height:29px;display: inline-block;position:absolute; top:5px; left:20px;cursor:pointer}
