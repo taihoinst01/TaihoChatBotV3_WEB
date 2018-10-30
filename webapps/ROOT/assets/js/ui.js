@@ -141,6 +141,7 @@ $(function () {
             } else {
                 $('.wc-chatview-panel').show().animate({ "right": "27%" }, "slow").fadeIn("slow");
             }
+            $('#animationDiv > canvas').css({ "height": 80 + "%" });
 
             $('.wc-console, wc-message-pane').show();
             $('#animationDiv').show();
@@ -161,6 +162,7 @@ $(function () {
             $('.wc-console').animate({ "height": 37 + "px", "left":5+"px","right":5+"px","bottom":10+"px" }, "fast");
             $('.wc-console label').animate({ "width":42+"px","height": 32 + "px"}, "fast");
             $('.sendIcon').removeClass('sendIcon').addClass('m_sendIcon');
+            $('#animationDiv > canvas').css({ "height": 592 + "px" });
 
             $('.btnLayer').removeClass('btnLayerFull').addClass('btnLayerMid');
             $('.btnLayer > span').css({ 'display': 'inline-block' }).removeClass('topIcon02').addClass('m_topIcon02');
