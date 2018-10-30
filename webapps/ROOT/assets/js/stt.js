@@ -17,31 +17,36 @@ if (!('webkitSpeechRecognition' in window)) {
         //showInfo('info_speak_now');
         console.log('info_speak_now');
         //start_img.src = 'C:/Users/user/source/repos/nhchatbotweb_google/webapps/ROOT/assets/image/mic_img/mic-animate.gif';
-        $('.ttsMic').removeClass("ttsMicBlack").addClass("ttsMicRed")
+        //$('.ttsMic').removeClass("ttsMicBlack").addClass("ttsMicRed");
+        ttsIconBlackisRed;
     };
 
     recognition.onerror = function (event) {
         if (event.error == 'no-speech') {
             //start_img.src = 'C:/Users/user/source/repos/nhchatbotweb_google/webapps/ROOT/assets/image/mic_img/mic.gif';
             //showInfo('info_no_speech');
-            $('.ttsMic').removeClass("ttsMicRed").addClass("ttsMicBlack")
+            //$('.ttsMic').removeClass("ttsMicRed").addClass("ttsMicBlack");
+            ttsIconRedisBlack();
             console.log('info_no_speech');
             ignore_onend = true;
         }
         if (event.error == 'audio-capture') {
             //start_img.src = 'C:/Users/user/source/repos/nhchatbotweb_google/webapps/ROOT/assets/image/mic_img/mic.gif';
             //showInfo('info_no_microphone');
-            $('.ttsMic').removeClass("ttsMicRed").addClass("ttsMicBlack")
+            //$('.ttsMic').removeClass("ttsMicRed").addClass("ttsMicBlack");
+            ttsIconRedisBlack();
             console.log('info_no_microphone');
             ignore_onend = true;
         }
         if (event.error == 'not-allowed') {
             if (event.timeStamp - start_timestamp < 100) {
                 //showInfo('info_blocked');
-                $('.ttsMic').removeClass("ttsMicRed").addClass("ttsMicBlack")
+                //$('.ttsMic').removeClass("ttsMicRed").addClass("ttsMicBlack");
+                ttsIconRedisBlack();
             } else {
                 //showInfo('info_denied');
-                $('.ttsMic').removeClass("ttsMicRed").addClass("ttsMicBlack")
+                //$('.ttsMic').removeClass("ttsMicRed").addClass("ttsMicBlack");
+                ttsIconRedisBlack();
             }
             ignore_onend = true;
         }
@@ -53,7 +58,8 @@ if (!('webkitSpeechRecognition' in window)) {
             return;
         }
         //start_img.src = 'C:/Users/user/source/repos/nhchatbotweb_google/webapps/ROOT/assets/image/mic_img/mic.gif';
-        $('.ttsMic').removeClass("ttsMicRed").addClass("ttsMicBlack")
+        //$('.ttsMic').removeClass("ttsMicRed").addClass("ttsMicBlack");
+        ttsIconRedisBlack();
         if (!final_transcript) {
             //showInfo('info_start');
             console.log("recognition.onend");
@@ -130,7 +136,8 @@ function startButton(event) {
     //final_span.innerHTML = '';
     //interim_span.innerHTML = '';
     //start_img.src = 'C:/Users/user/source/repos/nhchatbotweb_google/webapps/ROOT/assets/image/mic_img/mic-slash.gif';
-    $('.ttsMic').removeClass("ttsMicBlack").addClass("ttsMicRed")
+    //$('.ttsMic').removeClass("ttsMicBlack").addClass("ttsMicRed");
+    ttsIconBlackisRed();
     //showInfo('info_allow');
     //showButtons('none');
     start_timestamp = event.timeStamp;
@@ -160,3 +167,19 @@ function showInfo(s) {
 //    copy_info.style.display = 'none';
 //    email_info.style.display = 'none';
 //}
+
+function ttsIconRedisBlack() {
+    if ($('.topGestureOnImg').attr('alt') == 'on' || $('.topGestureOffImg').attr('alt') == 'off') {
+        $('.ttsMic').removeClass("ttsMicRed").addClass("ttsMicBlack");
+    } else if ($('.m_topGestureOnImg').attr('alt') == 'on' || $('.m_topGestureOffImg').attr('alt') == 'off') {
+        $('.ttsMic').removeClass("m_ttsMicRed").addClass("m_ttsMicBlack");
+    }
+}
+
+function ttsIconBlackisRed() {
+    if ($('.topGestureOnImg').attr('alt') == 'on' || $('.topGestureOffImg').attr('alt') == 'off') {
+        $('.ttsMic').removeClass("ttsMicBlack").addClass("ttsMicRed");
+    } else if ($('.m_topGestureOnImg').attr('alt') == 'on' || $('.m_topGestureOffImg').attr('alt') == 'off') {
+        $('.ttsMic').removeClass("m_ttsMicBlack").addClass("m_ttsMicRed");
+    }
+}

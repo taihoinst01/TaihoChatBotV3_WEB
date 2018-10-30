@@ -142,6 +142,7 @@ $(function () {
             $('.wc-console label').animate({ "width": 60 + "px", "height": 60 + "px" }, "fast");
             $('.m_sendIcon').removeClass('m_sendIcon').addClass('sendIcon');
             $('#animationDiv > canvas').css({ "height": 80 + "%" });
+
             if ($('.m_topGestureOnImg').attr('alt') == 'on') {
                 $('.wc-chatview-panel').show().animate({ "right": "5%" }, "slow").fadeIn("slow");
                 $('.m_topGestureOnImg').removeClass('m_topGestureOnImg').addClass('topGestureOnImg');
@@ -150,6 +151,7 @@ $(function () {
                 $('.m_topGestureOffImg').removeClass('m_topGestureOffImg').addClass('topGestureOffImg');
             }
             $('.m_ttsMicBlack').removeClass('m_ttsMicBlack').addClass('ttsMicBlack');
+            $('.m_ttsMicRed').removeClass('m_ttsMicRed').addClass('ttsMicRed');
 
             $('.wc-console, wc-message-pane').show();
             $('#animationDiv').show();
@@ -171,6 +173,7 @@ $(function () {
             $('.wc-console label').animate({ "width":42+"px","height": 32 + "px"}, "fast");
             $('.sendIcon').removeClass('sendIcon').addClass('m_sendIcon');
             $('#animationDiv > canvas').css({ "height": 592 + "px" });
+
             if ($('.topGestureOnImg').attr('alt') == 'on') {
                 $('.wc-chatview-panel').show().animate({ "right": "5%" }, "slow").fadeIn("slow");
                 $('.topGestureOnImg').removeClass('topGestureOnImg').addClass('m_topGestureOnImg');
@@ -179,6 +182,7 @@ $(function () {
                 $('.topGestureOffImg').removeClass('topGestureOffImg').addClass('m_topGestureOffImg');
             }
             $('.ttsMicBlack').removeClass('ttsMicBlack').addClass('m_ttsMicBlack');
+            $('.ttsMicRed').removeClass('ttsMicRed').addClass('m_ttsMicRed');
 
             $('.btnLayer').removeClass('btnLayerFull').addClass('btnLayerMid');
             $('.btnLayer > span').css({ 'display': 'inline-block' }).removeClass('topIcon02').addClass('m_topIcon02');
@@ -198,25 +202,6 @@ $(function () {
     
     //챗봇 제스처 동작
     var startGesture = 0;
-    //$('.topGestureArea').click(function () {
-    //    if ($('.topGestureIcon').css('float') == 'left') {
-    //        //Gesture off
-    //        $('.topGestureIcon').css({ 'float': 'right' });
-    //        $('.gesture-wrapper').hide().animate({ "height": "0", "opacity": "0" }, "slow").fadeOut("slow");
-    //        $('.wc-chatview-panel').show().animate({ "right": "27%" }, "slow").fadeIn("slow");
-    //    } else {
-    //        //Gesture on
-    //        $('.topGestureIcon').css({ 'float': 'left' });
-    //        if (startGesture == 0) {
-    //            playAnimation('ChatBot_AniAll01');
-    //            $('#animationDiv > canvas').css({ 'border-radius': 15 + 'px' });
-    //            startGesture = 1;
-    //        }
-    //        $('.gesture-wrapper').show().animate({ "height": "80%", "opacity": "1" }, "slow").fadeIn("slow");
-    //        $('.wc-chatview-panel').show().animate({ "right": "5%"}, "slow").fadeIn("slow");
-    //    }
-    //});
-
     $('.topGestureArea2').click(function () {
         // 사이즈 클때
         if ($('.topGestureOnImg').attr('alt') == 'on') {
@@ -259,12 +244,22 @@ $(function () {
             $('.gesture-wrapper').show().animate({ "height": "80%", "opacity": "1" }, "slow").fadeIn("slow");
             $('.wc-chatview-panel').show().animate({ "right": "5%" }, "slow").fadeIn("slow");
         }
+
+        //Gesture 클릭시 팝업을 닫는다.
+        $('.mov-wrapper, .img-wrapper, .map-wrapper, .reel-wrapper').hide().animate({ "right": "-380px", "opacity": "0", "display": "none" }, "fast").fadeOut("fast");
     });
 
     //닫기 버튼
     $('.btnTopClose').click(function () {
         $("#video").attr('src', '');
-        $('.mov-wrapper, .img-wrapper, .map-wrapper, .reel-wrapper').hide().animate({ "right": "-380px", "opacity": "0", "display": "none" }, "slow").fadeOut("slow");
+        $('.mov-wrapper, .img-wrapper, .map-wrapper, .reel-wrapper').hide().animate({ "right": "-380px", "opacity": "0", "display": "none" }, "fast").fadeOut("fast");
+        
+        if ($('.topGestureOnImg').attr('alt') == 'on') {
+            $('.wc-chatview-panel').show().animate({ "right": 5 + "%" }, "fast");
+        } else if ($('.topGestureOffImg').attr('alt') == 'off') {
+            $('.wc-chatview-panel').show().animate({ "right": 27 + '%' }, "fast");
+        }
+
     });
 
     //현재위치사용승인
@@ -343,7 +338,16 @@ $(function () {
             var imgCnt = $(this).parent().parent().parent().children().eq(0).children().eq(3).attr('alt');
             $('#imgTag').attr('src', imgUrl);
             $('#imgTitle').text(imgPopTitle);
-            $('.img-wrapper').show().animate({ "right": "421px", "opacity": "1" }, "fast");
+
+            if ($('.topGestureOnImg').attr('alt') == 'on') {
+                $('.img-wrapper').show().animate({ "right": "780px", "opacity": "1" }, "fast");
+                $('.wc-chatview-panel').show().animate({ "right": 0 }, "fast");
+            } else if ($('.topGestureOffImg').attr('alt') == 'off') {
+                $('.img-wrapper').show().animate({ "right": "930px", "opacity": "1" }, "fast");
+                $('.wc-chatview-panel').show().animate({ "right": 150 + 'px' }, "fast");
+            } else {
+                $('.img-wrapper').show().animate({ "right": "421px", "opacity": "1" }, "fast");
+            }
         } else if (popType == "play") { // PLAY
             $('.img-wrapper, .map-wrapper, .reel-wrapper').fadeOut();
             var movPopTitle = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
@@ -392,16 +396,7 @@ $(function () {
         }
     });
 
-    //마이크 ON/OFF
-    $('.ttsMic').click(function () {
-        if ($(this).hasClass('ttsMicBlack')) {
-            $('.ttsMic').removeClass('ttsMicBlack');
-            $('.ttsMic').addClass('ttsMicRed');
-        } else {
-            $('.ttsMic').removeClass('ttsMicRed');
-            $('.ttsMic').addClass('ttsMicBlack');
-        }
-    });
+    
 });
 
 //챗봇 메뉴 처음으로 돌아가기
