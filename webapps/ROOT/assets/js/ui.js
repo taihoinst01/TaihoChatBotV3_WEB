@@ -142,6 +142,7 @@ $(function () {
             $('.wc-console label').animate({ "width": 60 + "px", "height": 60 + "px" }, "fast");
             $('.m_sendIcon').removeClass('m_sendIcon').addClass('sendIcon');
             $('#animationDiv > canvas').css({ "height": 80 + "%" });
+            $('.wc-carousel').css({ 'width': 706 + 'px' });
 
             if ($('.m_topGestureOnImg').attr('alt') == 'on') {
                 $('.wc-chatview-panel').show().animate({ "right": "5%" }, "slow").fadeIn("slow");
@@ -176,6 +177,7 @@ $(function () {
             $('.wc-console label').animate({ "width":42+"px","height": 32 + "px"}, "fast");
             $('.sendIcon').removeClass('sendIcon').addClass('m_sendIcon');
             $('#animationDiv > canvas').css({ "height": 592 + "px" });
+            $('.wc-carousel').css({ 'width': 351 + 'px' });
 
             if ($('.topGestureOnImg').attr('alt') == 'on') {
                 $('.wc-chatview-panel').show().animate({ "right": "5%" }, "slow").fadeIn("slow");

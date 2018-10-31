@@ -7286,7 +7286,7 @@
                 }
                 return r.__extends(e, t), e.prototype.updateContentWidth = function() {
                     var t = this.props.size.width - this.props.format.carouselMargin;
-                    this.root.style.width = "", this.root.offsetWidth > t && (this.root.style.width = t.toString() + "px", this.hscroll.updateScrollButtons())
+                    this.root.style.width = "", this.root.offsetWidth > t && (this.root.style.width = t.toString()-30 + "px", this.hscroll.updateScrollButtons())
                 }, e.prototype.componentDidMount = function() {
                     this.updateContentWidth()
                 }, e.prototype.componentDidUpdate = function() {

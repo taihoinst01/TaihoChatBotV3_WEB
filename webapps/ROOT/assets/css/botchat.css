@@ -374,9 +374,14 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     fill: #000000;
   }
   .wc-carousel button.scroll.previous {
-    left: 0px; }
+    left: 0px;
+    z-index:1000;
+  }
   .wc-carousel button.scroll.next {
-    right: 24px; }
+    /*right: 24px;*/
+    right: 0px;
+    z-index:1000;
+  }
   .wc-carousel .wc-hscroll > ul {
     margin-left: -4px; }
   .wc-carousel .wc-hscroll > ul > li {
