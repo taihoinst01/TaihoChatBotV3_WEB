@@ -227,7 +227,7 @@ $(function () {
                 $('#animationDiv > canvas').css({ 'border-radius': 15 + 'px' });
                 startGesture = 1;
             }
-            $('.gesture-wrapper').show().animate({ "height": "80%", "opacity": "1" }, "slow").fadeIn("slow");
+            $('.gesture-wrapper').show().animate({ "height": "90%", "opacity": "1" }, "slow").fadeIn("slow");
             $('.wc-chatview-panel').show().animate({ "right": "5%" }, "slow").fadeIn("slow");
         // 사이즈 작을때
         } else if ($('.m_topGestureOnImg').attr('alt') == 'on') {

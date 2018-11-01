@@ -4,11 +4,10 @@
     "\\webapps",
     "\\webapps\\ROOT",
     "\\webapps\\ROOT\\assets",
-    "\\webapps\\ROOT\\assets\\css",
     "\\webapps\\ROOT\\assets\\image",
     "\\webapps\\ROOT\\assets\\js",
     "\\webapps\\ROOT\\assets\\js\\gesture"
   ],
-  "SelectedNode": "\\webapps\\ROOT\\assets\\js\\gesture\\three.js",
+  "SelectedNode": "\\webapps\\ROOT\\assets\\js\\ui.js",
   "PreviewInSolutionExplorer": false
 }
