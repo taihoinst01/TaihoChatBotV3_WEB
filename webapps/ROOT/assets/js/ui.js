@@ -224,7 +224,7 @@ $(function () {
             $('.topGestureIcon').css({ 'float': 'left' });
             if (startGesture == 0) {
                 playAnimation('ChatBot_AniAll01');
-                $('#animationDiv > canvas').css({ 'border-radius': 15 + 'px' });
+                $('#animationDiv > canvas').css({ 'border-radius': 15 + 'px', "position": "absolute", "bottom": 0 });
                 startGesture = 1;
             }
             $('.gesture-wrapper').show().animate({ "height": "100%", "opacity": "1" }, "slow").fadeIn("slow");
