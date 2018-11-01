@@ -71,7 +71,7 @@
 .m_titleIcon{background: url("../image/chatbotStyle/m_chatbot.png") no-repeat; height:15px;width:109px; display: inline-block;left:157px;top:12px; position:absolute}
 .m_topIcon02{background: url("../image/chatbotStyle/m_icon01.png") no-repeat;  width:15px;height:15px;display: inline-block;right: 50px;top:12px;position: absolute;cursor:pointer}
 .m_topIcon03{background: url("../image/chatbotStyle/m_icon02.png") no-repeat;  width:15px;height:15px;display: inline-block;right: 25px;top:12px;position: absolute;cursor:pointer}
-.m_gestureArea{opacity:1;position:absolute;left:-83%;width:340px;height:590px;/*display:none;background-color:#fff;*/border-radius:15px}
+.m_gestureArea{opacity:1;position:absolute;left:-83%;width:450px;height:590px;/*display:none;background-color:#fff;*/border-radius:15px}
 .m_wc-chatview-panel {width: 419px;height: 552px;overflow: hidden;position: absolute;top:38px;left:0;bottom: 5%;}
 .m_sendIcon{background: url("../image/chatbotStyle/m_btn.png") no-repeat; width:32px;height:32px;margin:2px} /*이미지용*/
 .m_topGestureOnImg{background: url("../image/chatbotStyle/m_character01.png") no-repeat; width:54px;height:29px;display: inline-block;position:absolute; top:5px; left:20px;cursor:pointer}

@@ -141,7 +141,7 @@ $(function () {
             $('.wc-console').animate({ "height": 60 + "px", "left": 0 + "px", "right": 0 + "px", "bottom": 0 + "px" }, "fast");
             $('.wc-console label').animate({ "width": 60 + "px", "height": 60 + "px" }, "fast");
             $('.m_sendIcon').removeClass('m_sendIcon').addClass('sendIcon');
-            $('#animationDiv > canvas').css({ "height": 80 + "%" });
+            $('#animationDiv > canvas').css({ "height": 100 + "%" });
             $('.wc-carousel').css({ 'width': 706 + 'px' });
 
             if ($('.m_topGestureOnImg').attr('alt') == 'on') {
@@ -176,7 +176,7 @@ $(function () {
             $('.wc-console').animate({ "height": 37 + "px", "left":5+"px","right":5+"px","bottom":10+"px" }, "fast");
             $('.wc-console label').animate({ "width":42+"px","height": 32 + "px"}, "fast");
             $('.sendIcon').removeClass('sendIcon').addClass('m_sendIcon');
-            $('#animationDiv > canvas').css({ "height": 592 + "px" });
+            $('#animationDiv > canvas').css({ "height": 680 + "px" });
             $('.wc-carousel').css({ 'width': 351 + 'px' });
 
             if ($('.topGestureOnImg').attr('alt') == 'on') {
@@ -247,7 +247,7 @@ $(function () {
             //    $('#animationDiv > canvas').css({ 'border-radius': 15 + 'px' });
             //    startGesture = 1;
             //}
-            $('.gesture-wrapper').show().animate({ "height": "80%", "opacity": "1" }, "slow").fadeIn("slow");
+            $('.gesture-wrapper').show().animate({ "height": "100%", "opacity": "1" }, "slow").fadeIn("slow");
             $('.wc-chatview-panel').show().animate({ "right": "5%" }, "slow").fadeIn("slow");
         }
 
