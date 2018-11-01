@@ -109,7 +109,7 @@ function playAnimation(fbxName) {
 
     function init() {
         container = $('#animationDiv');
-        console.log('1');
+        
         //원근 투영 을 사용하는 카메라 .
         //camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 3, 200000);
         //camera.position.set(100, 2000, 5500);
@@ -198,7 +198,7 @@ function playAnimation(fbxName) {
 
             });
             scene.add(object);
-            console.log('2');
+            
         });
 
         //WebGL 렌더러를 사용하여 아름답게 제작 된 장면을 표시
