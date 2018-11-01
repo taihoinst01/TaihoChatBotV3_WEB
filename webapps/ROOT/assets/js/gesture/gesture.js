@@ -115,7 +115,8 @@ function playAnimation(fbxName) {
         //camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 3, 200000);
         //camera.position.set(100, 2000, 5500);
         camera = new THREE.PerspectiveCamera(45, 340 / 650, 3, 200000);     //케릭터 생성위치(width/height)
-        camera.position.set(100, 2000, 6500);
+        //camera.position.set(100, 2000, 6500);
+        camera.position.set(100, 2000, 4500);
 
         //궤도 제어는 카메라가 표적 주위를 도는 것을 허용합니다. 
         //controls = new THREE.OrbitControls(camera);
@@ -124,7 +125,7 @@ function playAnimation(fbxName) {
 
         //장면을 사용하면 three.js에서 렌더링 할 내용의 위치를 ​​설정할 수 있습니다. 이것은 물건, 조명 및 카메라를 배치하는 곳입니다.
         scene = new THREE.Scene();
-        //scene.background = new THREE.Color(0xa0a0a0);
+        //scene.background = new THREE.Color(0xa0a0a0); //투명화를 위한 주석
         //scene.background = new THREE.Color(0xffffff);
 
         //하늘색에서 바탕색으로 색상이 희미 해져 장면 바로 위에 배치 된 광원입니다. 이 빛은 그림자를 드리 우는 데 사용할 수 없습니다.
@@ -244,5 +245,7 @@ function animate() {
         }
     }
     renderer.render(scene, camera);
+    console.log('1');
     stats.update();
+    console.log('2');
 }
