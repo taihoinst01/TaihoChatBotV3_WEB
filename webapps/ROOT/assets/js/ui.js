@@ -109,11 +109,11 @@ $(function () {
     $(".wc-console > div").add(
         "<div class='ttsMic ttsMicBlack' onclick='startButton(event)'>&nbsp</div > ").appendTo(".wc-console");
 
-    //챗봇창 버튼 동작
-    $('.btnClose').click(function () {
-        $('.wc-chatview-panel').css('bottom', 0).hide();
-        $('.bot-wrap').hide().removeClass("chatOn").addClass("chatOff");
-    });
+    //챗봇창 버튼 동작 (시연으로 인해 일단 막기)
+    //$('.btnClose').click(function () {
+    //    $('.wc-chatview-panel').css('bottom', 0).hide();
+    //    $('.bot-wrap').hide().removeClass("chatOn").addClass("chatOff");
+    //});
     $('.btnMin').click(function () {
         $('.btnTopClose').click();
         $('.wc-chatview-panel').css({ "overflow": "hidden" });
@@ -335,6 +335,7 @@ $(function () {
 
         $("#video").attr('src', '');
 
+        var chageChatHeight = parseInt($('.wc-chatview-panel').css('height')) - 323;    //팝업창 크기가 변하면 숫자 수정해야함
         if (popType == "img") { // IMG
             $('.mov-wrapper, .map-wrapper, .reel-wrapper').fadeOut();
             $('#imgDiv > div').remove();
@@ -346,13 +347,13 @@ $(function () {
             $('#imgTitle').text(imgPopTitle);
 
             if ($('.topGestureOnImg').attr('alt') == 'on') {
-                $('.img-wrapper').show().animate({ "right": "780px", "opacity": "1" }, "fast");
+                $('.img-wrapper').show().animate({ "right": "780px", "opacity": "1", "bottom": chageChatHeight + "px" }, "fast");
                 $('.wc-chatview-panel').show().animate({ "right": 0 }, "fast");
             } else if ($('.topGestureOffImg').attr('alt') == 'off') {
-                $('.img-wrapper').show().animate({ "right": "930px", "opacity": "1" }, "fast");
-                $('.wc-chatview-panel').show().animate({ "right": 150 + 'px' }, "fast");
+                $('.img-wrapper').show().animate({ "right": "930px", "opacity": "1", "bottom": chageChatHeight + "px" }, "fast");
+                $('.wc-chatview-panel').show().animate({ "right": 150 + 'px'}, "fast");
             } else {
-                $('.img-wrapper').show().animate({ "right": "421px", "opacity": "1" }, "fast");
+                $('.img-wrapper').show().animate({ "right": "421px", "opacity": "1", "bottom": chageChatHeight + "px" }, "fast");
             }
         } else if (popType == "play") { // PLAY
             $('.img-wrapper, .map-wrapper, .reel-wrapper').fadeOut();
@@ -362,13 +363,13 @@ $(function () {
             $('#video').attr('src', movPopUrl);
 
             if ($('.topGestureOnImg').attr('alt') == 'on') {
-                $('.mov-wrapper').show().animate({ "right": "780px", "opacity": "1" }, "fast");
+                $('.mov-wrapper').show().animate({ "right": "780px", "opacity": "1", "bottom": chageChatHeight + "px" }, "fast");
                 $('.wc-chatview-panel').show().animate({ "right": 0 }, "fast");
             } else if ($('.topGestureOffImg').attr('alt') == 'off') {
-                $('.mov-wrapper').show().animate({ "right": "930px", "opacity": "1" }, "fast");
+                $('.mov-wrapper').show().animate({ "right": "930px", "opacity": "1", "bottom": chageChatHeight + "px" }, "fast");
                 $('.wc-chatview-panel').show().animate({ "right": 150 + 'px' }, "fast");
             } else {
-                $('.mov-wrapper').show().animate({ "right": "421px", "opacity": "1" }, "fast");
+                $('.mov-wrapper').show().animate({ "right": "421px", "opacity": "1", "bottom": chageChatHeight + "px" }, "fast");
             }
         } else if (popType == "map") {  // MAP
             $('.mov-wrapper, .img-wrapper, .reel-wrapper').fadeOut();
@@ -391,7 +392,7 @@ $(function () {
                 position: new naver.maps.LatLng(longitude, latitude),
                 map: map
             });
-            $('.map-wrapper').show().animate({ "right": "421px", "opacity": "1" }, "fast");
+            $('.map-wrapper').show().animate({ "right": "421px", "opacity": "1", "bottom": chageChatHeight + "px" }, "fast");
         } else if (popType == "reel") { // REEL
             $('.img-wrapper, .map-wrapper, .mov-wrapper').fadeOut();
 
@@ -407,7 +408,7 @@ $(function () {
                 });
             }
 
-            $('.reel-wrapper').show().animate({ "right": "421px", "opacity": "1" }, "fast");
+            $('.reel-wrapper').show().animate({ "right": "421px", "opacity": "1", "bottom": chageChatHeight + "px" }, "fast");
         }
     });
 

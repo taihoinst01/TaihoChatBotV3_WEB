@@ -52,7 +52,7 @@
 /* popup Area 236*/
 .popupArea{opacity:0;position: absolute;right:0;bottom: 472px;width:569px;height:354px;display:none;background-color:#fff;z-index:1500;border-top-left-radius:15px;border-top-right-radius:15px;}
 .popupTitle{font-size:20px;color:#FFF;position:absolute;top:5px;left:15px}
-.popHeader{background-color:#4b4f57; background-size: 100%;height: 38px;width: 571px; position: relative;border-top-left-radius:15px;border-top-right-radius:15px}
+.popHeader{background-color:#4b4f57; background-size: 100%;height: 38px;width: 569px; position: relative;border-top-left-radius:15px;border-top-right-radius:15px}
 .popBody{background-color: #fbfbfb;height:318px; position: relative;}
 .btnTopClose{background: url("../image/chatbotStyle/btn_close.png") no-repeat;  width:17px;height:17px;display: inline-block;top: 13px; right: 10px;position: absolute;border:none;}
 .imgBox img{width:568px}

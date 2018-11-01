@@ -142,7 +142,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   overflow: hidden;
   position: absolute;
   right: 27%;
-  bottom: 5%;
+  /*bottom: 5%;*/
+  bottom: 30px;
 }
 
 /* messages */

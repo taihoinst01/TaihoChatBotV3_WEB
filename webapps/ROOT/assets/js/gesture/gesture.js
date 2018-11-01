@@ -124,7 +124,7 @@ function playAnimation(fbxName) {
 
         //장면을 사용하면 three.js에서 렌더링 할 내용의 위치를 ​​설정할 수 있습니다. 이것은 물건, 조명 및 카메라를 배치하는 곳입니다.
         scene = new THREE.Scene();
-        scene.background = new THREE.Color(0xa0a0a0);
+        //scene.background = new THREE.Color(0xa0a0a0);
         //scene.background = new THREE.Color(0xffffff);
 
         //하늘색에서 바탕색으로 색상이 희미 해져 장면 바로 위에 배치 된 광원입니다. 이 빛은 그림자를 드리 우는 데 사용할 수 없습니다.
@@ -212,7 +212,7 @@ function playAnimation(fbxName) {
         //출력 캔버스를 장치 픽셀 비율을 고려하여 (너비, 높이)로 조정하고 (0, 0)부터 시작하여 뷰포트를 해당 크기에 맞게 설정합니다.
         //renderer.setSize(window.innerWidth, window.innerHeight);
 
-        console.log($('.gesture-wrapper').css('height'));
+        //console.log($('.gesture-wrapper').css('height'));
 
         var _gestureHeight = parseInt($('.gesture-wrapper').css('height'));
         renderer.setSize(340, _gestureHeight);     //챗팅창에 고려한 canvas 사이즈 임의 조정
