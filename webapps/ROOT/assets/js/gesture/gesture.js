@@ -101,7 +101,6 @@ function playAnimation(fbxName) {
     if (!Detector.webgl) Detector.addGetWebGLMessage();
     clock = new THREE.Clock();
 
-    console.log('1');
     init();
     animate();
     console.log('2');
@@ -110,13 +109,13 @@ function playAnimation(fbxName) {
 
     function init() {
         container = $('#animationDiv');
-
+        console.log('1');
         //원근 투영 을 사용하는 카메라 .
         //camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 3, 200000);
         //camera.position.set(100, 2000, 5500);
         camera = new THREE.PerspectiveCamera(45, 340 / 650, 3, 200000);     //케릭터 생성위치(width/height)
         //camera.position.set(100, 2000, 6500);
-        camera.position.set(100, 2500, 5000);
+        camera.position.set(100, 2000, 5000);
 
         //궤도 제어는 카메라가 표적 주위를 도는 것을 허용합니다. 
         //controls = new THREE.OrbitControls(camera);
@@ -223,7 +222,7 @@ function playAnimation(fbxName) {
 
         // stats
         stats = new Stats();
-
+        console.log('2');
     }
 
     //Window Size 변경에 따른 카메라 및 화면 조정
