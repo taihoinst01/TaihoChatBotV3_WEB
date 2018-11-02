@@ -78,7 +78,7 @@ $(function () {
     //    "<span class='topGestureArea'>" +
     //    "<div class='topGestureOff'>OFF</div><div class='topGestureOn'>ON</div> <div class='topGestureIcon'></div>  " +
     //    "</span>").appendTo(".wc-header");
-    $(".mainBG > span").add(
+    $(".chatbotLayer > span").add(
         "<span class='chatTitle'><span class='titleIcon'></span></span>" +
         //"<span class='chatTitleText'>TIIZ <strong>ChatBot</strong></span>" +
         "<span class='topIcon btnClose'><span class='topIcon03'></span></span>" +
@@ -125,14 +125,15 @@ $(function () {
         $('.btnLayer').removeClass('btnLayerFull').addClass('btnLayerMid');
         $('.btnLayer > span').removeClass('topIcon02').addClass('topIcon02-1');
     });
-    $(document).on('click', '.mainBG [class*=btnLayer]', function () {
+    $(document).on('click', '.chatbotLayer [class*=btnLayer]', function () {
         if ($(this).hasClass('btnLayerMid')) {
             //$('.wc-chatview-panel').animate({ "height": "528px" }, "fast");
             //$('.popupArea').animate({ 'bottom': '174px' }, "fast");
             //$('.gestureArea').animate({ "height": "528px" }, "fast");
 
             //창 늘릴때 바꾸는 부분
-            $('.mainBG').animate({ "width": 90 + "%", "height": 90 + "%" }, "fast");
+            //$('.mainBG').animate({ "width": 90 + "%", "height": 90 + "%" }, "fast");
+            $('.m_mainBG').removeClass('m_mainBG').addClass('mainBG');
             $('.m_chatTitle > span').removeClass('m_titleIcon').addClass('titleIcon');
             $('.m_chatTitle').removeClass('m_chatTitle').addClass('chatTitle');
             $('.m_topIcon03').removeClass('m_topIcon03').addClass('topIcon03');
@@ -167,7 +168,8 @@ $(function () {
             //$('.popupArea').animate({ 'bottom': ($(window).height() - 352) + 'px' }, "fast");
 
             //창 줄일때 바꾸는 부분
-            $('.mainBG').animate({ "width": 420 + "px", "height": 590 + "px" }, "fast");
+            //$('.mainBG').animate({ "width": 420 + "px", "height": 590 + "px" }, "fast");
+            $('.mainBG').removeClass('mainBG').addClass('m_mainBG');
             $('.chatTitle > span').removeClass('titleIcon').addClass('m_titleIcon');
             $('.chatTitle').removeClass('chatTitle').addClass('m_chatTitle');
             $('.topIcon03').removeClass('topIcon03').addClass('m_topIcon03');

@@ -7285,8 +7285,9 @@
                     return t.call(this, e) || this
                 }
                 return r.__extends(e, t), e.prototype.updateContentWidth = function() {
-                    var t = this.props.size.width - this.props.format.carouselMargin;
-                    this.root.style.width = "", this.root.offsetWidth > t && (this.root.style.width = t.toString()-30 + "px", this.hscroll.updateScrollButtons())
+                    //var t = this.props.size.width - this.props.format.carouselMargin; //original
+                    var t = parseInt($('.wc-message-groups').css('width')) - this.props.format.carouselMargin - 30; //KSO 줄였을때 carousel 크기 조정
+                    this.root.style.width = "", this.root.offsetWidth > t && (this.root.style.width = t.toString() + "px", this.hscroll.updateScrollButtons())
                 }, e.prototype.componentDidMount = function() {
                     this.updateContentWidth()
                 }, e.prototype.componentDidUpdate = function() {

@@ -357,7 +357,9 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 
 /* carousel */
 .wc-carousel {
-  position: relative; }
+  position: relative;
+  min-width:312px;
+}
   .wc-carousel button.scroll {
     background-color: #d2dde5;
     height: 28px;
@@ -417,7 +419,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 
 .wc-message-from-me .wc-message-content span{font-size:14px;color:#fff;line-height:15px;}
 /*.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;background:#00aad2;border-radius:5px;}*/ /* original */
-.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;background:#fff;color:#000;border-radius:15px;}
+.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;background:#fff;color:#000;border-radius:15px;box-shadow: 3px 3px 5px 0px #424242;}
 
 /* from bot */
 .wc-message-from-bot {
