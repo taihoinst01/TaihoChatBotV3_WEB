@@ -12,15 +12,15 @@
 .topIcon01{background: url("../image/chatbotStyle/btn_down.png") no-repeat;  width:14px;height:13px;display: inline-block;top: 14px; right: 58px;position: absolute;cursor:pointer} 
 .topIcon02{background: url("../image/chatbotStyle/icon01.png") no-repeat;  width:33px;height:33px;display: inline-block;top: 25px; right: 12%;position: absolute;cursor:pointer}
 .topIcon02-1{background: url("../image/chatbotStyle/icon03.png") no-repeat;  width:33px;height:33px;display: inline-block;top: 25px; right: 12%;position: absolute;cursor:pointer}
-.topIcon03{background: url("../image/chatbotStyle/icon02.png") no-repeat;  width:33px;height:33px;display: inline-block;top: 25px; right: 8%;position: absolute;cursor:pointer}
+.topIcon03{background: url("../image/chatbotStyle/icon02.png") no-repeat;  width:33px;height:33px;display: inline-block;top: 25px; right: 7%;position: absolute;cursor:pointer}
 /*.topIcon{width:12px; height:12px;cursor:pointer;margin:7px 3px 0 9px;float:right}*/
 /*.topGestureArea{float:right;background:#424242;width:65px;height:24px;cursor:pointer;position:absolute;top:8px;left:20px;border:1px solid grey}
 .topGestureIcon{color:#302f35 !important;background:#fff;width:32px;height:22px;display:inline-block;float:right}
 .topGestureOff{display:inline-block;position:absolute;top:1px;margin-left:33px;color:#424242}
 .topGestureOn{display:inline-block;position:absolute;top:1px;margin-left:5px;color:#424242}*/
 .topGestureArea2{height:54px;width:100px}
-.topGestureOnImg{background: url("../image/chatbotStyle/character01.png") no-repeat; width:100px;height:54px;display: inline-block;position:absolute; top:15px; left:30px;cursor:pointer}
-.topGestureOffImg{background: url("../image/chatbotStyle/character02.png") no-repeat; width:100px;height:54px;display: inline-block;position:absolute; top:15px; left:30px;cursor:pointer}
+.topGestureOnImg{background: url("../image/chatbotStyle/character01.png") no-repeat; width:100px;height:54px;display: inline-block;position:absolute; top:15px; left:60px;cursor:pointer}
+.topGestureOffImg{background: url("../image/chatbotStyle/character02.png") no-repeat; width:100px;height:54px;display: inline-block;position:absolute; top:15px; left:60px;cursor:pointer}
 
 /* chat view */
 .wc-list{background-color: #f1f3f6;border-radius:15px}
