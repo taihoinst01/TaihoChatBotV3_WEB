@@ -272,7 +272,8 @@ $(function () {
 
     //현재위치사용승인
     //$(document).on('click', '.wc-card > .wc-card-buttons > li > button:contains("현재 위치 사용 승인")', function () {
-    $(document).on('click', '.wc-list button:contains("현재 위치 사용 승인")', function () {
+    //$(document).on('click', '.wc-list button:contains("현재 위치 사용 승인")', function () {
+    $(document).on('click', '.ac-pushButton:contains("현재 위치 사용 승인")', function () {
         navigator.geolocation.getCurrentPosition(function (position) {
             var pos = { lat: position.coords.latitude, lng: position.coords.longitude };
             //alert("현재 위치: 위도(" + pos.lat + "), 경도(" + pos.lng + ")");
